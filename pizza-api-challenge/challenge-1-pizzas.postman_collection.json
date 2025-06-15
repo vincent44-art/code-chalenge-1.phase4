@@ -1,0 +1,211 @@
+{
+    "info": {
+      "_postman_id": "c5b5e5f4-5c5f-4f5f-8f5f-5f5f5f5f5f5f",
+      "name": "Pizza API Challenge",
+      "description": "Full Postman collection for the Pizza API Challenge with Pizzas, Restaurants, and RestaurantPizzas",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get All Pizzas",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "body": { "mode": "raw", "raw": "" },
+          "url": {
+            "raw": "https://api.example.com/pizzas",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["pizzas"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Pizza by ID",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "body": { "mode": "raw", "raw": "" },
+          "url": {
+            "raw": "https://api.example.com/pizzas/:id",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["pizzas", ":id"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Create Pizza",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"name\":\"Margherita\",\"description\":\"Classic pizza with tomato sauce and mozzarella cheese\",\"price\":8.99}"
+          },
+          "url": {
+            "raw": "https://api.example.com/pizzas",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["pizzas"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Update Pizza",
+        "request": {
+          "method": "PUT",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"name\":\"Updated Margherita\",\"description\":\"Now with extra cheese\",\"price\":9.99}"
+          },
+          "url": {
+            "raw": "https://api.example.com/pizzas/:id",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["pizzas", ":id"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Delete Pizza",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "body": { "mode": "raw", "raw": "" },
+          "url": {
+            "raw": "https://api.example.com/pizzas/:id",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["pizzas", ":id"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get All Restaurants",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "body": { "mode": "raw", "raw": "" },
+          "url": {
+            "raw": "https://api.example.com/restaurants",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["restaurants"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Restaurant by ID",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "body": { "mode": "raw", "raw": "" },
+          "url": {
+            "raw": "https://api.example.com/restaurants/:id",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["restaurants", ":id"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Create Restaurant",
+        "request": {
+          "method": "POST",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"name\":\"Pizza Palace\",\"address\":\"123 Flavor Street\"}"
+          },
+          "url": {
+            "raw": "https://api.example.com/restaurants",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["restaurants"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Update Restaurant",
+        "request": {
+          "method": "PUT",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"name\":\"Updated Pizza Palace\",\"address\":\"456 New Flavor Ave\"}"
+          },
+          "url": {
+            "raw": "https://api.example.com/restaurants/:id",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["restaurants", ":id"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Delete Restaurant",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "body": { "mode": "raw", "raw": "" },
+          "url": {
+            "raw": "https://api.example.com/restaurants/:id",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["restaurants", ":id"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Create RestaurantPizza",
+        "request": {
+          "method": "POST",
+          "header": [
+            { "key": "Content-Type", "value": "application/json" }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"pizza_id\": 1,\n  \"restaurant_id\": 2,\n  \"price\": 12.99\n}"
+          },
+          "url": {
+            "raw": "https://api.example.com/restaurant_pizzas",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["restaurant_pizzas"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get All RestaurantPizzas",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "body": { "mode": "raw", "raw": "" },
+          "url": {
+            "raw": "https://api.example.com/restaurant_pizzas",
+            "protocol": "https",
+            "host": ["api", "example", "com"],
+            "path": ["restaurant_pizzas"]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
