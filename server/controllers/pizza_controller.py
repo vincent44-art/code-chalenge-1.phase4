@@ -12,3 +12,20 @@ def get_pizzas():
         for p in pizzas
     ]
     return jsonify(result), 200
+
+
+
+    
+@pizza_bp.route('/<int:id>', methods=['GET'])
+def get_pizza_by_id(id):
+    pizza = Pizza.query.get(id)
+    if pizza:
+        result = {
+            "id": pizza.id,
+            "name": pizza.name,
+            "ingredients": pizza.ingredients
+        }
+        return jsonify(result), 200
+    else:
+        return jsonify({"error": "Pizza not found"}), 404
+    
